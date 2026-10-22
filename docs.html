@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Docs | Tetsu Corp</title>
+<meta name="description" content="How Tetsu Corp works: borrowing against Robinhood stock tokens on Morpho Blue, lending through agent farms on Morpho Vault V2, the agent playbook, every parameter, the contracts and the risks.">
+<meta name="theme-color" content="#fff8ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141821" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://tetsucorp.si/docs">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tetsu Corp">
+<meta property="og:title" content="Tetsu Corp docs: how loans, farms and agents work">
+<meta property="og:description" content="Borrowing on Morpho Blue, lending through agent farms on Morpho Vault V2, the agent playbook, every parameter, the contracts and the risks.">
+<meta property="og:url" content="https://tetsucorp.si/docs">
+<meta property="og:image" content="https://tetsucorp.si/og-docs.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="THE MANUAL over a library among the stars: how Tetsu Corp loans, farms and agents work. Every number, every risk.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@tetsucorp">
+<meta name="twitter:title" content="Tetsu Corp docs: how loans, farms and agents work">
+<meta name="twitter:description" content="Borrowing on Morpho Blue, lending through agent farms on Morpho Vault V2, the agent playbook, every parameter, the contracts and the risks.">
+<meta name="twitter:image" content="https://tetsucorp.si/og-docs.jpg">
+<meta name="twitter:image:alt" content="THE MANUAL over a library among the stars: how Tetsu Corp loans, farms and agents work. Every number, every risk.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/DelaGothicOne-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ChakraPetch-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/docs.css">
+<script src="/js/theme.js"></script>
+<script type="module" src="/js/docs.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="ca-bar">
+    <div class="wrap ca-in">
+      <span class="ca-tag">$TETSU <b>CA</b></span>
+      <button class="ca-addr" type="button" data-copy-ca translate="no" aria-label="Copy the $TETSU contract address 0xcomingsoon">0xcomingsoon</button>
+      <button class="ca-btn" type="button" data-copy-ca>Copy</button>
+      <a class="ca-btn ca-buy" href="https://ponsfamily.com/launchpad/0xcomingsoon" rel="noopener" target="_blank">Buy</a>
+    </div>
+  </div>
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Tetsu Corp home">
+      <img src="/img/brand/logo-64.png" width="38" height="38" alt="">
+      <span class="brand-txt"><span class="brand-word">TETSU CORP</span><span class="brand-kana">テツ・コーポ</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/app#/markets">Borrow</a>
+      <a href="/app#/farms">Farms</a>
+      <a href="/docs" aria-current="page">Docs</a>
+      <a class="x-link" href="https://x.com/tetsucorp" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="sr">Tetsu Corp on X</span></a>
+    </nav>
+    <div class="nav-act">
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Switch between paper and night city">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+ 
+      <button class="icon-btn menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="sheet-menu" id="menu">
+    <a href="/app#/markets">Borrow <span class="kana">借りる</span></a>
+    <a href="/app#/farms">Farms <span class="kana">ファーム</span></a>
+    <a href="/app#/portfolio">Portfolio <span class="kana">ポートフォリオ</span></a>
+    <a href="/docs">Docs <span class="kana">説明書</span></a>
+    <a href="https://x.com/tetsucorp" rel="noopener" target="_blank">X @tetsucorp <span class="kana">エックス</span></a>
+    <button class="menu-theme" type="button" data-theme-toggle>Paper or night <span class="kana">テーマ</span></button>
+  
+  </div>
+</header>
+
+<main id="main" class="wrap docs">
+  <aside class="toc" aria-label="On this page">
+    <p class="eyebrow"><span>Docs</span><span class="kana">説明書</span></p>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#borrow">Borrowing</a></li>
+      <li><a href="#farms">Farms</a></li>
+      <li><a href="#agents">The agents</a></li>
+      <li><a href="#liquidations">Liquidations</a></li>
+      <li><a href="#markets">Every market</a></li>
+      <li><a href="#contracts">Contracts</a></li>
+      <li><a href="#risks">Risks</a></li>
+      <li><a href="#builders">For builders and AI agents</a></li>
+    </ol>
+  </aside>
+
+  <article class="doc">
+    <header class="doc-head">
+      <p class="ep"><b>DOCS</b><span>How it works</span><span class="kana">説明書</span></p>
+      <h1 class="h-sec">The Tetsu Corp <em>manual.</em></h1>
+      <p class="lede">Everything the site does, in plain words, with every number it uses. If something here disagrees with the contracts, the contracts win.</p>
+      <figure class="doc-art">
+        <picture>
+          <source media="(max-width: 700px)" type="image/webp" srcset="/img/studio/bn-library-750.webp">
+          <img src="/img/studio/bn-library-1500.webp" width="1500" height="500" alt="Tetsu reads in a library among the stars while a whale made of light swims past the shelves">
+        </picture>
+      </figure>
+    </header>
+
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>Tetsu Corp is a lending cockpit for Robinhood stock tokens on Robinhood Chain (chain id 4663). Two kinds of people use it:</p>
+      <ul>
+        <li><b>Borrowers</b> deposit a stock token, such as NVDA or SPY, and borrow USDG against it.</li>
+        <li><b>Lenders</b> deposit USDG into one of three farms. Each farm has an agent that places the USDG with borrowers.</li>
+      </ul>
+      <p>Every loan lives in a <b>Morpho Blue</b> market, one per stock. Every farm is a <b>Morpho Vault V2</b> with a Morpho market adapter. Those contracts were written, audited and deployed by Morpho; Tetsu Corp did not write them. Tetsu Corp adds three things: a price adapter per stock (the oracle each market reads), an agent per farm, and this site.</p>
+    </section>
+
+    <section id="borrow">
+      <h2>Borrowing</h2>
+      <h3>The flow</h3>
+      <ol>
+        <li>Approve the stock token for Morpho Blue, then deposit it as collateral.</li>
+        <li>If the market does not hold enough free USDG, the app first asks the farm's agent to bring some (<code>pull</code>, see the agents).</li>
+        <li>Borrow USDG. It lands in your wallet.</li>
+        <li>Repay any time, in part or in full. Then withdraw your collateral.</li>
+      </ol>
+      <p>Each step is its own wallet confirmation. The app checks every step against the chain before it sends, so a step that would fail tells you why without costing gas.</p>
+      <h3>How much</h3>
+      <p>Each stock has a <b>liquidation line</b> (Morpho calls it LLTV): 86% for SGOV, 77% for SPY and QQQ, 62.5% for large companies and funds, 38.5% for volatile and small companies. The app lets a loan start at no more than <b>85% of the line</b>, so a 62.5% line allows a loan of up to about 53% of the collateral's value. You can borrow more later as long as you stay under that start limit.</p>
+      <h3>What it costs</h3>
+      <p>Interest only: the market's borrow rate, accrued every second. The rate comes from Morpho's Adaptive Curve model. It aims to keep each market 90% used: above 90% the rate climbs, steeply near 100%; below, it eases. Over days the whole curve also drifts up while a market stays busy and down while it stays quiet. There is no fee to open, add to, repay or close a loan. Gas on Robinhood Chain is a few cents at most.</p>
+      <h3>Prices</h3>
+      <p>Each market reads its stock's Chainlink feed on Robinhood Chain through a Tetsu Corp price adapter. The feeds report USD per token, 24 hours a day, five days a week. The adapter refuses a price older than five days: a market whose feed has been silent that long stops new borrowing, collateral withdrawals and liquidations until the feed updates. Repaying and adding collateral always work.</p>
+    </section>
+
+    <section id="farms">
+      <h2>Farms</h2>
+      <p>A farm is a Morpho Vault V2 holding USDG. Deposit USDG and you receive farm shares; the shares grow as borrowers pay interest. Withdraw at any time from the farm's free cash.</p>
+      <ul>
+        <li><b>SORA-01</b> lends against index funds, treasuries and commodity funds: SPY, QQQ, SGOV, EWY, SLV, USO.</li>
+        <li><b>KIRA-02</b> lends against large companies: AAPL, MSFT, GOOGL, AMZN, META, NVDA, TSM, ASML, ORCL, DELL, BABA, INTC.</li>
+        <li><b>RAIDEN-03</b> lends against fast movers and small companies: TSLA, AMD, MU, PLTR, SPCX, COIN, MSTR, GME, SNDK, CRCL, CRWV, NBIS, RKLB, USAR, IONQ, RGTI, CLSK.</li>
+      </ul>
+      <p>Each stock is lent to by exactly one farm. A farm keeps <b>10% of the interest</b> it earns as its fee to Tetsu Corp; the APY the app shows is after that fee, at the current rates.</p>
+      <p>Part of a farm is always lent out. If you withdraw more than the farm holds in cash, the app first asks the agent to free cash from its quietest markets (<code>free</code>). Money a borrower holds cannot be freed until it is repaid or liquidated. As a last resort, Vault V2 lets anyone pull their share out of a specific market directly (<code>forceDeallocate</code>) for a 0.5% penalty paid to the farm.</p>
+    </section>
+
+    <section id="agents">
+      <h2>The agents</h2>
+      <p>An agent is a small contract that is an <b>allocator</b> of its farm's vault. Vault V2 lets an allocator move USDG between the markets the farm has capped, and nothing else: it cannot send USDG anywhere, cannot change caps, and cannot add markets. The farm's caps can only be raised after a three day wait, so depositors always have time to leave before a new market can take their money.</p>
+      <h3>The playbook</h3>
+      <ol>
+        <li><b>Hold back.</b> Keep 5% of the farm idle as cash for withdrawals.</li>
+        <li><b>Fill.</b> Give each market enough USDG that its borrowers use at most 90% of it, the Adaptive Curve's own target.</li>
+        <li><b>Buffer.</b> Then add a little more to each market (2,000 USDG for SORA, 1,500 for KIRA, 500 for RAIDEN) so a walk-up borrower finds USDG at once.</li>
+        <li><b>Hold the rest</b> idle. Moves under 1 USDG are skipped.</li>
+      </ol>
+      <h3>Who can wake it</h3>
+      <ul>
+        <li><code>deposit(assets, receiver)</code>: deposits your USDG into the farm and places it by the playbook in the same transaction. This is what the app's Deposit button calls.</li>
+        <li><code>work()</code>: runs the whole playbook, moving USDG out of markets that hold more than they need and into markets that need more. Anyone can call it, once every 10 minutes.</li>
+        <li><code>pull(marketId, assets)</code>: brings USDG to one market for a borrower, from the farm's cash first and then from other markets' spare (never their fill). Anyone can call it.</li>
+        <li><code>free(assets)</code>: makes the farm's cash reach an amount for a withdrawal. Anyone can call it for up to what they hold in the farm.</li>
+      </ul>
+      <p>The agent's moves are public: the app's farm page shows its log (Placed, Lifted, Worked events) and where every USDG sits.</p>
+    </section>
+
+    <section id="liquidations">
+      <h2>Liquidations</h2>
+      <p>When a loan's debt passes its stock's liquidation line, Morpho Blue lets anyone repay some or all of it and take collateral worth the repayment plus a bonus. The bonus depends on the line: 1 / (1 - 0.3 x (1 - line)) - 1, capped at 15%. That is about 4.4% at an 86% line, 7.4% at 77%, 12.7% at 62.5% and 15% at 38.5%.</p>
+      <p>The app's Rescue board lists every open loan in Tetsu Corp's markets, riskiest first, and lets anyone with USDG close an unhealthy one. If a loan's collateral is worth less than its debt, the liquidator takes all of it and the rest of the debt is shared by the market's lenders as a loss.</p>
+    </section>
+
+    <section id="markets">
+      <h2>Every market</h2>
+      <p>The line, the start limit, the farm and the farm's cap on each market. Prices are live.</p>
+      <div class="table-wrap"><table class="ptable" data-ptable>
+        <thead><tr><th scope="col">Stock</th><th scope="col">Price</th><th scope="col">Liquidation line</th><th scope="col">Start limit</th><th scope="col">Bonus</th><th scope="col">Farm</th><th scope="col">Farm cap</th></tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </section>
+
+    <section id="contracts">
+      <h2>Contracts</h2>
+      <p>Every address, in one file: <a href="/contracts.json">contracts.json</a>. Each link below opens the contract on the Robinhood Chain explorer.</p>
+      <div class="clist" data-contracts></div>
+      <h3>Farm settings</h3>
+      <ul>
+        <li>Owner, curator and treasury: the Tetsu Corp treasury wallet. Allocators: the farm's agent and the treasury.</li>
+        <li>Performance fee 10% to the treasury. No management fee.</li>
+        <li>Three day timelock on every curator action that raises risk: adding an adapter, raising a cap, adding an allocator, gates, fees.</li>
+        <li>Adapters limited to Morpho's adapter registry, so only Morpho's own market adapter can ever be added.</li>
+        <li>Force deallocation penalty 0.5%.</li>
+      </ul>
+    </section>
+
+    <section id="risks">
+      <h2>Risks</h2>
+      <ul>
+        <li><b>Liquidation.</b> A loan past its line can be closed by anyone at a bonus taken from your collateral.</li>
+        <li><b>Gaps.</b> Stock prices can jump at the open, after a weekend or a holiday, past the line in one move. A loan started at the 85% limit has about 15% of room.</li>
+        <li><b>Stale feeds.</b> Five days without a price update pauses a market's new borrowing, collateral withdrawals and liquidations. Repaying and adding collateral still work.</li>
+        <li><b>Lender losses.</b> If liquidations do not happen in time, a market can end with debt larger than its collateral. Its lenders, a farm, take that loss.</li>
+        <li><b>Liquidity.</b> A farm's lent-out USDG comes back only as loans are repaid or liquidated.</li>
+        <li><b>New code.</b> The price adapters and the agents are new and have had no outside audit. They are small and cannot move money outside the farm's capped markets, but they can have bugs.</li>
+        <li><b>The stock tokens.</b> Robinhood stock tokens are issued by Robinhood under its own terms. What applies where you live is yours to check.</li>
+      </ul>
+    </section>
+
+    <section id="builders">
+      <h2>For builders and AI agents</h2>
+      <p>Everything here is open to scripts and to AI agents with their own wallets:</p>
+      <ul>
+        <li><a href="/llms.txt">llms.txt</a> and <a href="/agents.md">agents.md</a>: how an agent can borrow, farm and liquidate, with the calls in order.</li>
+        <li><a href="/contracts.json">contracts.json</a>: every address and every market's parameters.</li>
+        <li><code>GET /api/state</code>: live prices, markets, farms and the agents' log. <code>GET /api/loans</code>: every open loan with its health.</li>
+        <li><code>POST /api/rpc/4663</code>: a read-only Robinhood Chain JSON-RPC pass-through. Writes are refused; sign and send with your own node or wallet.</li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <a class="brand" href="/" aria-label="Tetsu Corp home"><img src="/img/brand/logo-64.png" width="38" height="38" alt=""><span class="brand-txt"><span class="brand-word">TETSU CORP</span><span class="brand-kana">テツ・コーポ</span></span></a>
+      <p>Stock credit on Robinhood Chain, farmed by agents. Loans and farms run on Morpho.</p>
+    </div>
+    <div>
+      <h4>Use it</h4>
+      <ul><li><a href="/app#/markets">Borrow</a></li><li><a href="/app#/farms">Farms</a></li><li><a href="/app#/portfolio">Portfolio</a></li><li><a href="/app#/liquidate">Liquidations</a></li></ul>
+    </div>
+    <div>
+      <h4>Read it</h4>
+      <ul><li><a href="/docs">Docs</a></li><li><a href="/contracts.json">Contracts</a></li><li><a href="/llms.txt">For AI agents</a></li><li><a href="https://x.com/tetsucorp" rel="noopener" target="_blank">X @tetsucorp</a></li></ul>
+    </div>
+  </div>
+  <div class="foot-base"><div class="wrap"><b>2026 Tetsu Corp</b><span>Robinhood Chain 4663</span></div></div>
+</footer>
+<div class="toast-host" data-toasts aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tetsu Corp: stock credit, farmed by agents</title>
+<meta name="description" content="Borrow USDG against Robinhood stock tokens, or lend USDG to a farm where an on-chain agent places it with borrowers. Morpho markets on Robinhood Chain.">
+<meta name="theme-color" content="#fff8ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141821" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://tetsucorp.si/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tetsu Corp">
+<meta property="og:title" content="Tetsu Corp: stock credit, farmed by agents">
+<meta property="og:description" content="Borrow USDG against Robinhood stock tokens. Lend USDG to agent farms. On Robinhood Chain.">
+<meta property="og:url" content="https://tetsucorp.si/">
+<meta property="og:image" content="https://tetsucorp.si/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tetsu Corp: Tetsu floats over a sunset city under a red and white umbrella. Stock credit, farmed by agents.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@tetsucorp">
+<meta name="twitter:title" content="Tetsu Corp: stock credit, farmed by agents">
+<meta name="twitter:description" content="Borrow USDG against Robinhood stock tokens. Lend USDG to agent farms. On Robinhood Chain.">
+<meta name="twitter:image" content="https://tetsucorp.si/og.jpg">
+<meta name="twitter:image:alt" content="Tetsu Corp: Tetsu floats over a sunset city under a red and white umbrella. Stock credit, farmed by agents.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/DelaGothicOne-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ChakraPetch-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" fetchpriority="high" href="/img/studio/pv-hero-sq-720.webp" media="(max-width: 700px)">
+<link rel="preload" as="image" fetchpriority="high" href="/img/studio/pv-hero-1280.webp" media="(min-width: 701px)">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/landing.css">
+<script src="/js/theme.js"></script>
+<script type="module" src="/js/landing.js"></script>
+</head>
+<body class="tv">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="ca-bar">
+    <div class="wrap ca-in">
+      <span class="ca-tag">$TETSU <b>CA</b></span>
+      <button class="ca-addr" type="button" data-copy-ca translate="no" aria-label="Copy the $TETSU contract address 0xcomingsoon">0xcomingsoon</button>
+      <button class="ca-btn" type="button" data-copy-ca>Copy</button>
+      <a class="ca-btn ca-buy" href="https://ponsfamily.com/launchpad/0xcomingsoon" rel="noopener" target="_blank">Buy</a>
+    </div>
+  </div>
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Tetsu Corp home">
+      <img src="/img/brand/logo-64.png" width="38" height="38" alt="">
+      <span class="brand-txt"><span class="brand-word">TETSU CORP</span><span class="brand-kana">テツ・コーポ</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#story">Story</a>
+      <a href="#pv">PV</a>
+      <a href="#characters">Cast</a>
+      <a href="#gallery">Gallery</a>
+   
+      <a class="x-link" href="https://x.com/tetsucorp" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="sr">Tetsu Corp on X</span></a>
+    </nav>
+    <div class="nav-act">
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Switch between paper and night city">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+     
+      <button class="icon-btn menu-btn" type="button" data-menu aria-expanded="false" aria-controls="menu" aria-label="Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="sheet-menu" id="menu">
+    <div class="menu-grid">
+      <a href="#news">News <span class="kana">お知らせ</span></a>
+      <a href="#story">Story <span class="kana">ストーリー</span></a>
+      <a href="#pv">PV <span class="kana">映像</span></a>
+      <a href="#characters">Cast <span class="kana">キャラクター</span></a>
+      <a href="#agents">Mecha <span class="kana">メカ</span></a>
+      <a href="#gallery">Gallery <span class="kana">ギャラリー</span></a>
+    </div>
+    <a href="/app#/markets">Borrow <span class="kana">借りる</span></a>
+    <a href="/app#/farms">Farms <span class="kana">ファーム</span></a>
+    <a href="/docs">Docs <span class="kana">説明書</span></a>
+    <a href="https://x.com/tetsucorp" rel="noopener" target="_blank">X @tetsucorp <span class="kana">エックス</span></a>
+    <a href="https://ponsfamily.com/launchpad/0xcomingsoon" rel="noopener" target="_blank">Buy $TETSU <span class="kana">買う</span></a>
+    <button class="menu-theme" type="button" data-copy-ca>Copy CA <span class="kana">コピー</span></button>
+    <button class="menu-theme" type="button" data-theme-toggle>Paper or night <span class="kana">テーマ</span></button>
+    <a class="btn coral block" href="/app">Open the app</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- KEY VISUAL: the opening, on air -->
+  <section class="op" aria-labelledby="op-title">
+    <div class="op-screen">
+      <picture class="kv-still">
+        <source media="(max-width: 700px)" type="image/webp" srcset="/img/studio/pv-hero-sq-720.webp">
+        <img src="/img/studio/pv-hero-1280.webp" width="1280" height="720" fetchpriority="high" alt="Tetsu floats over a city of towers at sunset under a red and white umbrella">
+      </picture>
+      <video class="kv-video" data-kv muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+      <div class="op-scan" aria-hidden="true"></div>
+      <div class="osd osd-l" aria-hidden="true"><span class="rec"></span><b>CH 4663</b><span>LIVE</span></div>
+      <div class="osd osd-r num" aria-hidden="true"><span data-osd-block>BLOCK -</span><span data-osd-clock>UTC --:--:--</span></div>
+      <p class="op-vert" aria-hidden="true">テツ・コーポ</p>
+
+      <div class="op-title">
+        <h1 id="op-title" class="logotype"><span class="lt lt-1">Tetsu</span><span class="lt lt-2">Corp</span></h1>
+        <p class="ribbon">Stock credit, farmed by agents</p>
+      </div>
+
+      <div class="op-bubble bubble" role="note">
+        <span class="bubble-name">TETSU</span>
+        <p>Hold Robinhood stock tokens? Borrow dollars against them without selling. Got USDG? My drones lend it out for you.</p>
+      </div>
+      <div class="kv-ctl">
+        <a class="btn coral kv-go" href="/app">Open the app</a>
+        <a class="btn kv-buy" href="https://ponsfamily.com/launchpad/0xcomingsoon" rel="noopener" target="_blank">Buy $TETSU</a>
+        <button class="btn kv-ca" type="button" data-copy-ca>Copy CA</button>
+        <a class="kv-pv" href="#pv"><span class="kv-pv-i" aria-hidden="true"></span><span>Watch the PV</span></a>
+        <button class="kv-toggle" type="button" data-kv-toggle aria-pressed="false" aria-label="Pause the background video" hidden><span class="kv-toggle-i" aria-hidden="true"></span></button>
+      </div>
+    </div>
+
+    <div class="op-deck wrap">
+      <nav class="menu" aria-label="Start">
+        <a class="menu-opt" href="/app#/markets"><span class="cursor" aria-hidden="true"></span><span class="menu-n num">01</span><span class="menu-t">Borrow on stocks</span><span class="menu-j" aria-hidden="true">借りる</span></a>
+        <a class="menu-opt" href="/app#/farms"><span class="cursor" aria-hidden="true"></span><span class="menu-n num">02</span><span class="menu-t">Farm with an agent</span><span class="menu-j" aria-hidden="true">育てる</span></a>
+        <a class="menu-opt" href="/docs"><span class="cursor" aria-hidden="true"></span><span class="menu-n num">03</span><span class="menu-t">Read the manual</span><span class="menu-j" aria-hidden="true">説明書</span></a>
+      </nav>
+      <p class="deck-token"><a class="btn kv-buy" href="https://ponsfamily.com/launchpad/0xcomingsoon" rel="noopener" target="_blank">Buy $TETSU</a><button class="btn kv-ca" type="button" data-copy-ca>Copy CA</button></p>
+      <p class="hero-fine">On Robinhood Chain. Loans run on Morpho. No sign-up.</p>
+      <dl class="scoreboard" aria-live="polite">
+        <div><dt>Stocks</dt><dd class="num" data-stat="stocks">35</dd></div>
+        <div><dt>Live feeds</dt><dd class="num" data-stat="feeds">35</dd></div>
+        <div><dt data-stat-label="deposits">In farms</dt><dd class="num" data-stat="deposits">-</dd></div>
+        <div><dt data-stat-label="borrowed">Lent out</dt><dd class="num" data-stat="borrowed">-</dd></div>
+      </dl>
+    </div>
+
+    <div class="crawl" aria-label="Stock token prices">
+      <p class="crawl-tag"><b>LIVE</b><span class="kana">株価</span></p>
+      <div class="crawl-win"><div class="crawl-track" data-tape></div></div>
+    </div>
+  </section>
+
+  <!-- NEWS: what happened, with dates -->
+  <section class="news" id="news" aria-labelledby="news-title">
+    <div class="wrap news-in">
+      <header class="news-head">
+        <h2 id="news-title" class="news-h">News</h2>
+        <p class="kana">お知らせ</p>
+      </header>
+      <ol class="news-list">
+        <li><time datetime="2026-10-22">2026.10.22</time><span class="ntag">Chain</span><p>Tetsu Corp is live on Robinhood Chain: 35 Morpho Blue markets, three Morpho Vault V2 farms and their agents, all in 106 transactions. Every Tetsu contract is verified on Sourcify. <a href="/contracts.json">The addresses</a></p></li>
+      </ol>
+      <details class="fold news-more">
+        <summary>More news (3)</summary>
+        <ol class="news-list">
+          <li><time datetime="2026-10-22">2026.10.22</time><span class="ntag">Farms</span><p>The three farms took their first deposits: 10 USDG each. SORA-01 placed its share across its six markets at once.</p></li>
+          <li><time datetime="2026-10-22">2026.10.22</time><span class="ntag">Check</span><p>919 read-back checks: every market, price adapter, cap and timelock on chain matches what this site uses.</p></li>
+          <li><time datetime="2026-10-22">2026.10.22</time><span class="ntag">Site</span><p>The official site opens, with the PV theater, the cast and the gallery.</p></li>
+        </ol>
+      </details>
+    </div>
+  </section>
+
+  <!-- EPISODE 1: the story and the manga page -->
+  <section class="ep-sec" id="story" aria-labelledby="ep1-title">
+    <div class="wrap">
+      <header class="eptitle">
+        <p class="ep-no"><span>Episode</span><b class="num">01</b></p>
+        <p class="ep-jp">株を担保に、ドルを借りる</p>
+        <h2 id="ep1-title" class="ep-h">Stocks in, dollars out</h2>
+      </header>
+
+      <figure class="synopsis">
+        <picture>
+          <source media="(max-width: 700px)" type="image/webp" srcset="/img/studio/bn-rail-run-750.webp">
+          <img src="/img/studio/bn-rail-run-1500.webp" width="1500" height="500" loading="lazy" alt="Tetsu runs along a rail bridge through a night city in the rain, an airship overhead">
+        </picture>
+        <figcaption>
+          <p class="syn-tag"><span>Story</span><span class="kana">あらすじ</span></p>
+          <p>In a city that never closes, stocks live on Robinhood Chain and dollars always run short. Tetsu, a courier with steel hands, keeps a credit shop where a stock token is the only ID you need. Lock a stock and she lends you USDG. Bring USDG and her three drones farm it out to the borrowers who pay.</p>
+        </figcaption>
+      </figure>
+
+      <div class="manga">
+        <article class="panel-m p-borrow">
+          <div class="pm-in">
+            <p class="sfx sfx-1" aria-hidden="true">ガシャン</p>
+            <div class="falling" aria-hidden="true">
+              <img loading="lazy" decoding="async" src="/img/stocks/NVDA.png" alt="" width="64" height="64"><img loading="lazy" decoding="async" src="/img/stocks/AAPL.png" alt="" width="64" height="64"><img loading="lazy" decoding="async" src="/img/stocks/TSLA.png" alt="" width="64" height="64"><img loading="lazy" decoding="async" src="/img/stocks/SPY.png" alt="" width="64" height="64"><img loading="lazy" decoding="async" src="/img/stocks/MSFT.png" alt="" width="64" height="64">
+            </div>
+            <h3 class="pm-h">Borrow</h3>
+            <div class="bubble bubble-tail-l pm-bubble"><p>Lock a stock token as collateral. Borrow USDG against it.</p></div>
+            <p class="narr">Repay any time and the stock comes back. No credit check. No selling.</p>
+          </div>
+        </article>
+        <article class="panel-m p-lend">
+          <div class="pm-in">
+            <p class="sfx sfx-2" aria-hidden="true">チャリン</p>
+            <div class="coin" aria-hidden="true"><span>USDG</span></div>
+            <h3 class="pm-h">Lend</h3>
+            <div class="bubble bubble-tail-r pm-bubble"><p>Got USDG? Drop it in a farm.</p></div>
+            <p class="narr">Borrowers pay interest. Your farm shares grow with it.</p>
+          </div>
+        </article>
+        <article class="panel-m p-farm">
+          <div class="pm-in">
+            <p class="sfx sfx-3" aria-hidden="true">ピピッ</p>
+            <figure class="inset" aria-hidden="true"><img src="/img/agents/kira-320.webp" alt="" width="320" height="320" loading="lazy"></figure>
+            <h3 class="pm-h">Farm</h3>
+            <div class="bubble bubble-drone pm-bubble"><span class="bubble-name">KIRA-02</span><p>Borrowers are busy in NVDA. Moving USDG there.</p></div>
+            <p class="narr">Each farm has a drone agent. It places the farm's USDG where borrowers pay, and anyone can wake it.</p>
+          </div>
+        </article>
+      </div>
+      <p class="caption-strip"><span>Every loan is a Morpho Blue market.</span><span>Every farm is a Morpho Vault V2.</span><span>Tetsu Corp adds the price adapters, the agents and this cockpit.</span></p>
+    </div>
+  </section>
+
+  <!-- EPISODE 2: the red line -->
+  <section class="ep-sec line-sec" id="loan" aria-labelledby="ep3-title">
+    <div class="wrap line-grid">
+      <div class="line-copy">
+        <header class="eptitle">
+          <p class="ep-no"><span>Episode</span><b class="num">02</b></p>
+          <p class="ep-jp">赤い線を越えるな</p>
+          <h2 id="ep3-title" class="ep-h">The red line</h2>
+        </header>
+        <div class="bubble bubble-tail-b line-bubble"><span class="bubble-name">TETSU</span><p>Every stock has a line. Stay under it and the loan is yours as long as you like. Cross it and anyone can repay your loan and take your collateral at a bonus.</p></div>
+        <ul class="line-facts">
+          <li><b>Interest</b> runs every second at the market's borrow rate. Busy markets cost more, quiet ones less.</li>
+          <li><b>No fees</b> to open, add, repay or close. Gas on Robinhood Chain is a few cents at most.</li>
+          <li><b>The bonus</b> a liquidator takes is up to 15% of what they repay. The rest of your collateral stays yours.</li>
+        </ul>
+      </div>
+      <form class="hud" data-calc aria-label="Loan simulator">
+        <div class="hud-head"><span class="rec"></span><b>LOAN SIM</b><span class="kana">シミュレーション</span></div>
+        <div class="gauge" data-gauge>
+          <svg viewBox="0 0 240 140" aria-hidden="true">
+            <path class="g-track" d="M20 120 A100 100 0 0 1 220 120"/>
+            <path class="g-safe" data-arc="safe"/>
+            <path class="g-warn" data-arc="warn"/>
+            <path class="g-red" data-arc="red"/>
+            <g class="g-ticks" data-ticks></g>
+            <line class="g-needle" data-needle x1="120" y1="120" x2="120" y2="32"/>
+            <circle class="g-hub" cx="120" cy="120" r="8"/>
+          </svg>
+          <div class="g-read"><b class="num" data-calc-ltv>0%</b><span>loan to value</span></div>
+        </div>
+        <div class="hud-ctl">
+          <label class="hfield"><span>Target</span><select data-calc-stock></select></label>
+          <label class="hfield"><span>Payload, shares</span><input data-calc-shares type="text" inputmode="decimal" value="2" autocomplete="off"></label>
+          <label class="hfield wide"><span>Thrust, USDG borrowed <output class="num" data-calc-borrow-out>0</output></span><input data-calc-borrow type="range" min="0" max="100" value="60" step="1"></label>
+        </div>
+        <dl class="hud-read">
+          <div><dt>Collateral</dt><dd class="num" data-calc-value>$0</dd></div>
+          <div><dt>Line</dt><dd class="num" data-calc-lltv>0%</dd></div>
+          <div><dt>Most at start</dt><dd class="num" data-calc-max>0%</dd></div>
+          <div><dt>Liquidated at</dt><dd class="num" data-calc-liq>$0</dd></div>
+        </dl>
+        <p class="hud-note" data-calc-note>Prices are live from each stock's Chainlink feed on Robinhood Chain.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- EPISODE 3: the roster of cards -->
+  <section class="ep-sec" id="stocks" aria-labelledby="ep4-title">
+    <div class="wrap">
+      <header class="eptitle">
+        <p class="ep-no"><span>Episode</span><b class="num">03</b></p>
+        <p class="ep-jp">三十五枚のカード</p>
+        <h2 id="ep4-title" class="ep-h">Thirty-five cards</h2>
+      </header>
+      <p class="ep-lede">Every stock token is its own market with its own line and its own lenders. Rank S lets you borrow the most against it, rank C the least.</p>
+      <div class="binder-tabs" role="group" aria-label="Filter by farm">
+        <button type="button" data-filter="all" aria-pressed="true">All 35</button>
+        <button type="button" data-filter="sora" aria-pressed="false">SORA</button>
+        <button type="button" data-filter="kira" aria-pressed="false">KIRA</button>
+        <button type="button" data-filter="raiden" aria-pressed="false">RAIDEN</button>
+      </div>
+      <ul class="cards" data-wall></ul>
+      <button class="btn wall-more" type="button" data-wall-more aria-expanded="false" hidden>Show all 35 cards</button>
+    </div>
+  </section>
+
+  <!-- EPISODE 4: the mecha, select your agent -->
+  <section class="select" id="agents" aria-labelledby="ep2-title">
+    <div class="select-floor" aria-hidden="true"></div>
+    <div class="wrap select-in">
+      <header class="eptitle light">
+        <p class="ep-no"><span>Episode</span><b class="num">04</b></p>
+        <p class="ep-jp">メカ エージェントを選べ</p>
+        <h2 id="ep2-title" class="ep-h">Select your agent</h2>
+      </header>
+
+      <div class="versus" data-select>
+        <figure class="vs-portrait">
+          <img data-sel-img src="/img/agents/sora-320.webp" alt="SORA-01, a hover cruiser" width="320" height="320" loading="lazy" decoding="async">
+          <figcaption><span class="vs-kana" data-sel-kana>ソラ</span></figcaption>
+          <span class="vs-p1" aria-hidden="true">P1</span>
+        </figure>
+        <div class="vs-sheet">
+          <div class="vs-top">
+            <div>
+              <p class="vs-role" data-sel-role>Index cruiser</p>
+              <h3 class="vs-name display" data-sel-name>SORA-01</h3>
+            </div>
+            <div class="vs-timer" title="Until anyone can wake this agent again">
+              <span class="num" data-sel-timer>--</span><small>next wake</small>
+            </div>
+          </div>
+          <p class="vs-blurb" data-sel-blurb>Flies the index funds, treasuries and commodity funds. The steadiest collateral.</p>
+          <dl class="bars">
+            <div><dt>Risk</dt><dd><span class="seg" data-bar="risk"></span></dd></div>
+            <div><dt>Steadiness</dt><dd><span class="seg" data-bar="margin"></span></dd></div>
+            <div><dt>Reach</dt><dd><span class="seg" data-bar="reach"></span><b class="num" data-sel-stocks>6</b></dd></div>
+          </dl>
+          <div class="loadout" data-sel-logos></div>
+          <dl class="vs-live">
+            <div><dt>Farm APY</dt><dd class="num" data-sel-apy>-</dd></div>
+            <div><dt>Deposits</dt><dd class="num" data-sel-tvl>-</dd></div>
+            <div><dt>Buffer, up to</dt><dd class="num" data-sel-buffer>$2,000</dd></div>
+          </dl>
+          <a class="btn coral" data-sel-go href="/app#/farm/sora">Farm with SORA-01</a>
+        </div>
+        <div class="roster" role="group" aria-label="Agents">
+          <button type="button" class="slot" data-agent="sora" aria-pressed="true"><img src="/img/agents/sora-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span>SORA</span></button>
+          <button type="button" class="slot" data-agent="kira" aria-pressed="false"><img src="/img/agents/kira-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span>KIRA</span></button>
+          <button type="button" class="slot" data-agent="raiden" aria-pressed="false"><img src="/img/agents/raiden-160.webp" alt="" width="160" height="160" loading="lazy" decoding="async"><span>RAIDEN</span></button>
+        </div>
+      </div>
+
+      <details class="movelist fold">
+        <summary class="ml-head"><b class="display">Special moves</b><span class="kana">必殺技</span><small>The playbook every agent runs. Morpho's vault checks each move against caps set in advance: an agent can only shift USDG between those markets, never send it anywhere else.</small></summary>
+        <ol>
+          <li><b>Hold back</b><i aria-hidden="true"></i><span>Keeps 5% of the farm as cash, so most withdrawals are instant.</span><kbd>5% cash</kbd></li>
+          <li><b>Fill</b><i aria-hidden="true"></i><span>Supplies each market until borrowers use 90% of it, and no more.</span><kbd>90% use</kbd></li>
+          <li><b>Buffer</b><i aria-hidden="true"></i><span>Parks a little extra in every market for walk-up borrowers.</span><kbd>+ buffer</kbd></li>
+          <li><b>Answer</b><i aria-hidden="true"></i><span>Moves cash from quiet markets the moment a borrower or a lender asks.</span><kbd>on call</kbd></li>
+          <li class="super"><b>Super: Wake</b><i aria-hidden="true"></i><span>Anyone can trigger a full run of the playbook, once every 10 minutes.</span><kbd>anyone</kbd></li>
+        </ol>
+      </details>
+    </div>
+  </section>
+
+  <!-- EYECATCH -->
+  <div class="eyecatch" aria-hidden="true">
+    <img src="/img/brand/tetsu-480.webp" alt="" width="480" height="480" loading="lazy">
+    <p><span>TETSU</span><span>CORP</span></p>
+    <p class="ec-jp">アイキャッチ</p>
+  </div>
+
+  <!-- PV: the theater -->
+  <section class="ep-sec pv-sec" id="pv" aria-labelledby="pv-title">
+    <div class="wrap">
+      <header class="eptitle">
+        <p class="ep-no"><span>Movie</span><b class="num">PV</b></p>
+        <p class="ep-jp">映像</p>
+        <h2 id="pv-title" class="ep-h">The PV theater</h2>
+      </header>
+      <div class="theater" data-theater>
+        <div class="screen">
+          <video data-pv controls playsinline preload="none" data-poster="/img/studio/pv-umbrella-1280.webp" src="/video/pv1-umbrella.mp4" aria-label="PV 01: Umbrella over the city"></video>
+          <p class="screen-cap"><b class="num" data-pv-no>PV 01</b><span data-pv-title>Umbrella over the city</span><span class="kana" data-pv-jp>傘の空</span></p>
+        </div>
+        <ol class="reel" aria-label="Choose a PV">
+          <li><button type="button" data-pv-pick="0" aria-pressed="true"><img src="/img/studio/pv-umbrella-240.webp" srcset="/img/studio/pv-umbrella-240.webp 240w, /img/studio/pv-umbrella-640.webp 640w" sizes="(max-width: 560px) 62vw, (max-width: 980px) 46vw, 112px" alt="" width="640" height="360" loading="lazy"><span class="reel-no num">PV 01</span><span class="reel-t">Umbrella over the city</span><span class="reel-d num">0:25</span></button></li>
+          <li><button type="button" data-pv-pick="1" aria-pressed="false"><img src="/img/studio/pv-night-market-240.webp" srcset="/img/studio/pv-night-market-240.webp 240w, /img/studio/pv-night-market-640.webp 640w" sizes="(max-width: 560px) 62vw, (max-width: 980px) 46vw, 112px" alt="" width="640" height="360" loading="lazy"><span class="reel-no num">PV 02</span><span class="reel-t">Night market patrol</span><span class="reel-d num">0:30</span></button></li>
+          <li><button type="button" data-pv-pick="2" aria-pressed="false"><img src="/img/studio/pv-tea-240.webp" srcset="/img/studio/pv-tea-240.webp 240w, /img/studio/pv-tea-640.webp 640w" sizes="(max-width: 560px) 62vw, (max-width: 980px) 46vw, 112px" alt="" width="640" height="360" loading="lazy"><span class="reel-no num">PV 03</span><span class="reel-t">Tea at the edge of town</span><span class="reel-d num">0:40</span></button></li>
+          <li><button type="button" data-pv-pick="3" aria-pressed="false"><img src="/img/studio/pv-harbor-rails-240.webp" srcset="/img/studio/pv-harbor-rails-240.webp 240w, /img/studio/pv-harbor-rails-640.webp 640w" sizes="(max-width: 560px) 62vw, (max-width: 980px) 46vw, 112px" alt="" width="640" height="480" loading="lazy"><span class="reel-no num">PV 04</span><span class="reel-t">Harbor, rails and repairs</span><span class="reel-d num">0:34</span></button></li>
+          <li><button type="button" data-pv-pick="4" aria-pressed="false"><img src="/img/studio/pv-moon-stairs-240.webp" srcset="/img/studio/pv-moon-stairs-240.webp 240w, /img/studio/pv-moon-stairs-640.webp 640w" sizes="(max-width: 560px) 62vw, (max-width: 980px) 46vw, 112px" alt="" width="640" height="480" loading="lazy"><span class="reel-no num">PV 05</span><span class="reel-t">The moon stairs</span><span class="reel-d num">0:31</span></button></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHARACTER: Tetsu in ten roles, each a part of the machine -->
+  <section class="cast" id="characters" aria-labelledby="cast-title">
+    <div class="wrap">
+      <header class="eptitle">
+        <p class="ep-no"><span>Cast</span><b class="num">10</b></p>
+        <p class="ep-jp">キャラクター 設定資料</p>
+        <h2 id="cast-title" class="ep-h">Tetsu, in ten roles</h2>
+      </header>
+      <p class="ep-lede">One heroine, ten outfits. Each one explains a part of how Tetsu Corp works.</p>
+      <div class="stage" data-cast>
+        <figure class="stage-pic">
+          <img data-cast-img src="/img/studio/ch01-pilot-720.webp" width="720" height="900" loading="lazy" decoding="async" alt="Tetsu as the pilot, in an orange flight suit with a star chart">
+          <figcaption class="stage-sw" aria-label="Colour swatches" data-cast-sw><i style="--c:#e2622b"></i><i style="--c:#1b2340"></i><i style="--c:#f4ecdc"></i></figcaption>
+          <span class="stage-scale" aria-hidden="true"></span>
+        </figure>
+        <div class="stage-sheet" aria-live="polite">
+          <p class="stage-top"><span class="stage-no num" data-cast-no>01</span><span class="stage-jp" data-cast-jp>パイロット</span></p>
+          <h3 class="stage-name" data-cast-name>The Pilot</h3>
+          <p class="stage-role" data-cast-role>Borrowing</p>
+          <div class="bubble stage-line"><p data-cast-line>Lock a stock token, take USDG, keep the stock. I fly the loan, you hold the controls.</p></div>
+          <ul class="stage-facts" data-cast-facts>
+            <li>Deposit a stock token as collateral and borrow USDG against it: 35 stocks, each its own Morpho Blue market.</li>
+            <li>A loan can start at up to 85% of the stock's liquidation line.</li>
+            <li>Repay any time, in part or in full, then take the stock back. No fee to open or close.</li>
+          </ul>
+          <a class="btn coral" data-cast-go href="/app#/markets">Borrow on stocks</a>
+        </div>
+        <div class="cast-roster" role="group" aria-label="Choose a role">
+          <button type="button" data-cast-pick="0" aria-pressed="true"><img src="/img/studio/ch01-pilot-240.webp" alt="" width="240" height="300" loading="lazy"><span>01 Pilot</span></button>
+          <button type="button" data-cast-pick="1" aria-pressed="false"><img src="/img/studio/ch02-kimono-240.webp" alt="" width="240" height="300" loading="lazy"><span>02 Lender</span></button>
+          <button type="button" data-cast-pick="2" aria-pressed="false"><img src="/img/studio/ch03-student-240.webp" alt="" width="240" height="300" loading="lazy"><span>03 Newcomer</span></button>
+          <button type="button" data-cast-pick="3" aria-pressed="false"><img src="/img/studio/ch04-mechanic-240.webp" alt="" width="240" height="300" loading="lazy"><span>04 Mechanic</span></button>
+          <button type="button" data-cast-pick="4" aria-pressed="false"><img src="/img/studio/ch05-captain-240.webp" alt="" width="240" height="300" loading="lazy"><span>05 Captain</span></button>
+          <button type="button" data-cast-pick="5" aria-pressed="false"><img src="/img/studio/ch06-phantom-240.webp" alt="" width="240" height="300" loading="lazy"><span>06 Phantom</span></button>
+          <button type="button" data-cast-pick="6" aria-pressed="false"><img src="/img/studio/ch07-astronaut-240.webp" alt="" width="240" height="300" loading="lazy"><span>07 Astronaut</span></button>
+          <button type="button" data-cast-pick="7" aria-pressed="false"><img src="/img/studio/ch08-samurai-240.webp" alt="" width="240" height="300" loading="lazy"><span>08 Samurai</span></button>
+          <button type="button" data-cast-pick="8" aria-pressed="false"><img src="/img/studio/ch09-astronomer-240.webp" alt="" width="240" height="300" loading="lazy"><span>09 Astronomer</span></button>
+          <button type="button" data-cast-pick="9" aria-pressed="false"><img src="/img/studio/ch10-officer-240.webp" alt="" width="240" height="300" loading="lazy"><span>10 Officer</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTION NOTES: how it is built, and how we know it works -->
+  <section class="ep-sec notes" id="notes" aria-labelledby="notes-title">
+    <div class="wrap">
+      <header class="eptitle">
+        <p class="ep-no"><span>Notes</span><b class="num">NB</b></p>
+        <p class="ep-jp">制作ノート</p>
+        <h2 id="notes-title" class="ep-h">Production notes</h2>
+      </header>
+      <p class="ep-lede">How Tetsu Corp is put together on Robinhood Chain, and what was checked before and after launch.</p>
+      <div class="notes-grid">
+        <details class="arch fold">
+          <summary class="arch-sum">How the contracts connect</summary>
+          <div class="lane">
+            <p class="lane-t"><b>Borrow</b><span class="kana">借りる</span></p>
+            <ol class="flow">
+              <li><b>Your wallet</b><span>Any wallet on chain 4663</span></li>
+              <li class="hot"><b>Morpho Blue</b><span>35 markets, one per stock: USDG loans against stock tokens</span></li>
+            </ol>
+          </div>
+          <div class="lane">
+            <p class="lane-t"><b>Price</b><span class="kana">価格</span></p>
+            <ol class="flow">
+              <li><b>Chainlink</b><span>One feed per stock, 24 hours, 5 days a week</span></li>
+              <li><b>TetsuOracle x35</b><span>Scales the feed for Morpho, refuses a price older than 5 days</span></li>
+              <li class="hot"><b>Morpho Blue</b><span>Each market reads its stock's adapter</span></li>
+            </ol>
+          </div>
+          <div class="lane">
+            <p class="lane-t"><b>Lend</b><span class="kana">貸す</span></p>
+            <ol class="flow">
+              <li><b>Your wallet</b><span>Deposit USDG through the farm's agent</span></li>
+              <li><b>TetsuAgent x3</b><span>Allocator of its farm: deposit, work, pull, free</span></li>
+              <li><b>Vault V2 x3</b><span>Farms made by Morpho's factories, 3-day timelocks</span></li>
+              <li class="hot"><b>Morpho Blue</b><span>USDG lent into the farm's capped markets</span></li>
+            </ol>
+          </div>
+        </details>
+        <dl class="proof">
+          <div><dt>Launch</dt><dd class="num">106</dd><dd>transactions from block 95,057,865, about 0.0013 ETH in gas</dd></div>
+          <div><dt>Verified</dt><dd class="num">38</dd><dd>Tetsu contracts with their source on Sourcify: 35 price adapters, 3 agents</dd></div>
+          <div><dt>Tests</dt><dd class="num">42</dd><dd>contract tests passed before anything was signed, fork tests on live chain state</dd></div>
+          <div><dt>Read back</dt><dd class="num">919</dd><dd>read-back checks of every market, oracle, cap and timelock on chain against the site</dd></div>
+          <div><dt>App flows</dt><dd class="num">8/8</dd><dd>borrow, repay, deposit, withdraw, wake and liquidate on a fork of the live chain, desktop and phone</dd></div>
+          <div><dt>Keys</dt><dd class="num">0</dd><dd>private keys in the app: every action is signed in your own wallet</dd></div>
+        </dl>
+      </div>
+      <p class="notes-links"><a class="btn" href="/contracts.json">Every address</a><a class="btn" href="/docs">The manual</a><a class="btn ghost" href="/llms.txt">For AI agents</a></p>
+    </div>
+  </section>
+
+  <!-- GALLERY: the key visuals -->
+  <section class="ep-sec gallery-sec" id="gallery" aria-labelledby="gal-title">
+    <div class="wrap">
+      <header class="eptitle">
+        <p class="ep-no"><span>Gallery</span><b class="num">09</b></p>
+        <p class="ep-jp">ギャラリー</p>
+        <h2 id="gal-title" class="ep-h">Key visuals</h2>
+      </header>
+      <ul class="gallery" data-gallery>
+        <li><button type="button" data-zoom="0"><img src="/img/studio/kv-cat-island-800.webp" srcset="/img/studio/kv-cat-island-800.webp 800w, /img/studio/kv-cat-island-1600.webp 1600w" sizes="(max-width: 700px) 100vw, (max-width: 1180px) 64vw, 750px" width="800" height="450" loading="lazy" alt="Tetsu sits on a giant clock above a white cat the size of an island, at sunset"><span class="g-cap"><b class="num">01</b>Cat island</span></button></li>
+        <li><button type="button" data-zoom="1"><img src="/img/studio/kv-rain-market-800.webp" srcset="/img/studio/kv-rain-market-800.webp 800w, /img/studio/kv-rain-market-1600.webp 1600w" sizes="(max-width: 700px) 50vw, (max-width: 1180px) 32vw, 370px" width="800" height="450" loading="lazy" alt="Tetsu rides a scooter through a rainy night market"><span class="g-cap"><b class="num">02</b>Rain market</span></button></li>
+        <li><button type="button" data-zoom="2"><img src="/img/studio/kv-harbor-800.webp" srcset="/img/studio/kv-harbor-800.webp 800w, /img/studio/kv-harbor-1600.webp 1600w" sizes="(max-width: 700px) 50vw, (max-width: 1180px) 32vw, 370px" width="800" height="450" loading="lazy" alt="Tetsu rests on a boat in a busy harbor under a steel bridge"><span class="g-cap"><b class="num">03</b>Harbor</span></button></li>
+        <li><button type="button" data-zoom="3"><img src="/img/studio/kv-rooftop-dusk-800.webp" srcset="/img/studio/kv-rooftop-dusk-800.webp 800w, /img/studio/kv-rooftop-dusk-1600.webp 1600w" sizes="(max-width: 700px) 50vw, (max-width: 1180px) 32vw, 370px" width="800" height="450" loading="lazy" alt="Tetsu leans on a rooftop wall above a city of towers at dusk"><span class="g-cap"><b class="num">04</b>Rooftop at dusk</span></button></li>
+        <li><button type="button" data-zoom="4"><img src="/img/studio/kv-cathedral-duel-800.webp" srcset="/img/studio/kv-cathedral-duel-800.webp 800w, /img/studio/kv-cathedral-duel-1600.webp 1600w" sizes="(max-width: 700px) 50vw, (max-width: 1180px) 32vw, 370px" width="800" height="450" loading="lazy" alt="Tetsu in armor fights a knight with a spear inside a moonlit cathedral"><span class="g-cap"><b class="num">05</b>Cathedral duel</span></button></li>
+        <li><button type="button" data-zoom="5"><img src="/img/studio/kv-cliff-leap-800.webp" srcset="/img/studio/kv-cliff-leap-800.webp 800w, /img/studio/kv-cliff-leap-1600.webp 1600w" sizes="(max-width: 700px) 50vw, (max-width: 1180px) 32vw, 370px" width="800" height="450" loading="lazy" alt="Tetsu leaps across a crumbling stone bridge in a grey valley"><span class="g-cap"><b class="num">06</b>Cliff leap</span></button></li>
+        <li><button type="button" data-zoom="6"><img src="/img/studio/kv-ruin-sword-800.webp" srcset="/img/studio/kv-ruin-sword-800.webp 800w, /img/studio/kv-ruin-sword-1600.webp 1600w" sizes="(max-width: 700px) 50vw, (max-width: 1180px) 32vw, 370px" width="800" height="450" loading="lazy" alt="Tetsu blocks a giant's axe with her sword among burning ruins"><span class="g-cap"><b class="num">07</b>Ruin sword</span></button></li>
+        <li><button type="button" data-zoom="7"><img src="/img/studio/kv-sky-pool-800.webp" srcset="/img/studio/kv-sky-pool-800.webp 800w, /img/studio/kv-sky-pool-1600.webp 1600w" sizes="(max-width: 700px) 50vw, (max-width: 1180px) 32vw, 370px" width="800" height="450" loading="lazy" alt="Tetsu in a yellow coat stands on the edge of a pool that holds a whole city at sunset"><span class="g-cap"><b class="num">08</b>City in the pool</span></button></li>
+        <li><button type="button" data-zoom="8"><img src="/img/studio/kv-laundromat-800.webp" srcset="/img/studio/kv-laundromat-800.webp 800w, /img/studio/kv-laundromat-1600.webp 1600w" sizes="(max-width: 700px) 50vw, (max-width: 1180px) 64vw, 750px" width="800" height="450" loading="lazy" alt="Tetsu kneels in a laundromat where autumn leaves pour out of a washing machine"><span class="g-cap"><b class="num">09</b>Laundromat seasons</span></button></li>
+      </ul>
+    </div>
+    <dialog class="lightbox" data-lightbox aria-label="Key visual">
+      <figure><img data-lb-img src="" alt=""><figcaption data-lb-cap></figcaption></figure>
+      <button class="lb-btn lb-prev" type="button" data-lb="prev" aria-label="Previous visual">&lsaquo;</button>
+      <button class="lb-btn lb-next" type="button" data-lb="next" aria-label="Next visual">&rsaquo;</button>
+      <button class="lb-btn lb-close" type="button" data-lb="close" aria-label="Close">&times;</button>
+    </dialog>
+  </section>
+
+  <!-- SPECIAL: what can go wrong -->
+  <section class="caution" id="risks" aria-labelledby="risk-title">
+    <div class="tape" aria-hidden="true"><span>注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION</span></div>
+    <figure class="caution-art">
+      <picture>
+        <source media="(max-width: 700px)" type="image/webp" srcset="/img/studio/bn-knight-750.webp">
+        <img src="/img/studio/bn-knight-1500.webp" width="1500" height="500" loading="lazy" alt="Tetsu in a red cloak crosses swords with a giant black knight under a red eclipse">
+      </picture>
+    </figure>
+    <div class="wrap manual">
+      <header class="manual-head">
+        <p class="kana">取扱説明書</p>
+        <h2 id="risk-title" class="ep-h"><span class="dt-only">Pilot's manual: w</span><span class="ph-only">W</span>hat can go wrong</h2>
+      </header>
+      <ol class="warnings">
+        <li><details class="fold" open><summary><span class="w-code num">W-01</span><h3>Liquidation</h3></summary><p>If a loan crosses its stock's line, anyone can repay part of it and take collateral at a bonus of up to 15%. Watch your health, add collateral or repay early.</p></details></li>
+        <li><details class="fold"><summary><span class="w-code num">W-02</span><h3>Weekend gaps</h3></summary><p>Prices come from Chainlink feeds that update 24 hours a day, five days a week. A stock can open far from Friday's price. If a feed is silent for five days, its market stops new borrowing, collateral withdrawals and liquidations until it updates. Repaying and adding collateral still work.</p></details></li>
+        <li><details class="fold"><summary><span class="w-code num">W-03</span><h3>Lending losses</h3></summary><p>Farms lend to borrowers. If a stock falls faster than liquidators act, a market can take a loss, and the farm lending there shares it.</p></details></li>
+        <li><details class="fold"><summary><span class="w-code num">W-04</span><h3>Withdrawals</h3></summary><p>Part of a farm is lent out. Withdrawals come from free cash, and the agent can free more from quiet markets, but not money a borrower holds until it is repaid or liquidated.</p></details></li>
+        <li><details class="fold"><summary><span class="w-code num">W-05</span><h3>New code</h3></summary><p>Loans and farms run on Morpho Blue and Morpho Vault V2, deployed by Morpho. Tetsu Corp's own contracts, the price adapters and the agents, are new and have had no outside audit. Raising a farm's caps, or changing its adapters, allocators or fees, waits three days.</p></details></li>
+        <li><details class="fold"><summary><span class="w-code num">W-06</span><h3>Stock tokens</h3></summary><p>Robinhood stock tokens are issued by Robinhood under its own terms. Check what you hold, and what applies where you live, before you borrow against it.</p></details></li>
+      </ol>
+    </div>
+    <div class="tape tape-r" aria-hidden="true"><span>注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION 注意 CAUTION</span></div>
+  </section>
+
+  <!-- ASK TETSU: the visual novel -->
+  <section class="ep-sec vn" id="faq" aria-labelledby="vn-title">
+    <div class="wrap vn-in">
+      <header class="eptitle">
+        <p class="ep-no"><span>Bonus</span><b class="num">05</b></p>
+        <p class="ep-jp">テツに聞け</p>
+        <h2 id="vn-title" class="ep-h">Ask Tetsu</h2>
+      </header>
+      <div class="vn-log">
+        <details class="vn-item fold" open><summary class="vn-q"><p>Do I need an account?</p></summary><div class="vn-a"><img src="/img/studio/face-128.webp" alt="" width="56" height="56" loading="lazy"><div><b>TETSU</b><p>No. Connect a wallet on Robinhood Chain. No sign-up, no credit check: the stock you deposit is the collateral.</p></div></div></details>
+        <details class="vn-item fold"><summary class="vn-q"><p>Where does the farm yield come from?</p></summary><div class="vn-a"><img src="/img/studio/face-128.webp" alt="" width="56" height="56" loading="lazy"><div><b>TETSU</b><p>Only from borrowers' interest. My drones place USDG where borrowers pay. Each farm keeps 10% of the interest as its fee to Tetsu Corp, the rest goes to depositors.</p></div></div></details>
+        <details class="vn-item fold"><summary class="vn-q"><p>Can an agent run off with my money?</p></summary><div class="vn-a"><img src="/img/studio/face-128.webp" alt="" width="56" height="56" loading="lazy"><div><b>TETSU</b><p>No. An agent is an allocator of a Morpho Vault V2. The vault lets it move USDG only between markets the farm capped in advance, and raising a cap waits three days. Your farm shares stay in your wallet.</p></div></div></details>
+        <details class="vn-item fold"><summary class="vn-q"><p>How much can I borrow?</p></summary><div class="vn-a"><img src="/img/studio/face-128.webp" alt="" width="56" height="56" loading="lazy"><div><b>TETSU</b><p>Up to 85% of the stock's line, so a fresh loan always starts with room. A 62.5% line lets you borrow about 53% of the stock's value.</p></div></div></details>
+        <details class="vn-item fold"><summary class="vn-q"><p>Which wallets work?</p></summary><div class="vn-a"><img src="/img/studio/face-128.webp" alt="" width="56" height="56" loading="lazy"><div><b>TETSU</b><p>Any wallet that can add a network: MetaMask, Rabby, Coinbase Wallet, Trust Wallet and others. On a phone, open tetsucorp.si inside your wallet app, or tap Connect and pick it.</p></div></div></details>
+        <details class="vn-item fold"><summary class="vn-q"><p>Where do I get stock tokens?</p></summary><div class="vn-a"><img src="/img/studio/face-128.webp" alt="" width="56" height="56" loading="lazy"><div><b>TETSU</b><p>Robinhood stock tokens live on Robinhood Chain. If your wallet already holds them, they show up the moment you connect.</p></div></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENDING: the schedule and the next episode -->
+  <section class="ending" aria-labelledby="end-title">
+    <div class="end-frame" aria-hidden="true">
+      <div class="end-art"><img src="/img/studio/bn-sea-train-1500.webp" srcset="/img/studio/bn-sea-train-750.webp 750w, /img/studio/bn-sea-train-1500.webp 1500w" sizes="(max-width: 625px) 750px, (max-width: 1250px) 120vw, 100vw" width="1500" height="500" loading="lazy" decoding="async" alt=""></div>
+      <p class="tbc"><span>To be continued</span><i></i></p>
+      <p class="tsuzuku">つづく</p>
+    </div>
+    <div class="wrap end-next">
+      <div class="end-copy">
+        <p class="kana">次回予告</p>
+        <h2 id="end-title" class="ep-h">Next episode<span class="dt-only">: your first loan</span></h2>
+        <div class="cta"><a class="btn coral" href="/app">Open the app</a><a class="btn" href="/docs">Read the manual</a></div>
+      </div>
+      <div class="onair" role="group" aria-labelledby="onair-title">
+        <p class="onair-head"><b id="onair-title">On chain</b><span class="kana">放送情報</span></p>
+        <dl>
+          <div><dt>Network</dt><dd>Robinhood Chain, chain ID 4663, always on</dd></div>
+          <div><dt>Prices</dt><dd>Chainlink, 24 hours a day, five days a week</dd></div>
+          <div><dt>Agents</dt><dd>Anyone can wake each one every 10 minutes</dd></div>
+          <div><dt>Safety</dt><dd>Three days of notice before a farm raises a cap, adds a market adapter or an allocator, or changes a fee</dd></div>
+          <div><dt>Fees</dt><dd>10% of a farm's interest; nothing to open or close a loan</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="credits">
+  <div class="wrap credits-in">
+    <a class="brand" href="/" aria-label="Tetsu Corp home"><img src="/img/brand/logo-64.png" width="38" height="38" alt=""><span class="brand-txt"><span class="brand-word">TETSU CORP</span><span class="brand-kana">テツ・コーポ</span></span></a>
+    <dl class="roll">
+      <div><dt>Starring</dt><dd>Tetsu, SORA-01, KIRA-02, RAIDEN-03</dd></div>
+      <div><dt>On channel</dt><dd>Robinhood Chain 4663</dd></div>
+      <div><dt>Lending engine</dt><dd>Morpho Blue and Morpho Vault V2</dd></div>
+      <div><dt>Prices from</dt><dd>Chainlink feeds</dd></div>
+      <div><dt>Stock tokens by</dt><dd>Robinhood</dd></div>
+      <div><dt>Production</dt><dd>Tetsu Corp Production Committee <span class="kana">テツ・コーポ製作委員会</span></dd></div>
+    </dl>
+    <nav class="credits-links" aria-label="Footer">
+      <a href="/app#/markets">Borrow</a><a href="/app#/farms">Farms</a><a href="/app#/liquidate">Rescue board</a><a href="/docs">Docs</a><a href="/contracts.json">Contracts</a><a href="/llms.txt">For AI agents</a><a href="https://ponsfamily.com/launchpad/0xcomingsoon" rel="noopener" target="_blank">Buy $TETSU</a><button class="theme-link ca-link" type="button" data-copy-ca>Copy CA</button><a href="https://x.com/tetsucorp" rel="noopener" target="_blank">X @tetsucorp</a>
+    </nav>
+  </div>
+  <div class="foot-base"><div class="wrap"><b>2026 Tetsu Corp</b><span>Broadcasting on Robinhood Chain</span></div></div>
+</footer>
+<div class="toast-host" data-toasts aria-live="polite"></div>
+</body>
+</html>

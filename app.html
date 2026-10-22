@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-theme="paper">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>App | Tetsu Corp</title>
+<meta name="description" content="Borrow USDG against Robinhood stock tokens, lend USDG through agent farms, and close unhealthy loans. On Robinhood Chain.">
+<meta name="theme-color" content="#fff8ea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141821" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://tetsucorp.si/app">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tetsu Corp">
+<meta property="og:title" content="Tetsu Corp app: borrow on stocks, farm with agents">
+<meta property="og:description" content="Borrow USDG against 35 Robinhood stock tokens, or lend USDG to a farm an on-chain agent runs. Connect a wallet on Robinhood Chain.">
+<meta property="og:url" content="https://tetsucorp.si/app">
+<meta property="og:image" content="https://tetsucorp.si/og-app.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The three Tetsu Corp agents on a night stage: SORA-01, KIRA-02 and RAIDEN-03. Borrow on 35 stock tokens, farm with three agents.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@tetsucorp">
+<meta name="twitter:title" content="Tetsu Corp app: borrow on stocks, farm with agents">
+<meta name="twitter:description" content="Borrow USDG against 35 Robinhood stock tokens, or lend USDG to a farm an on-chain agent runs. Connect a wallet on Robinhood Chain.">
+<meta name="twitter:image" content="https://tetsucorp.si/og-app.jpg">
+<meta name="twitter:image:alt" content="The three Tetsu Corp agents on a night stage: SORA-01, KIRA-02 and RAIDEN-03. Borrow on 35 stock tokens, farm with three agents.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" href="/fonts/DelaGothicOne-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/ChakraPetch-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/app.css">
+<script src="/js/theme.js"></script>
+<script src="/vendor/ethers-6.13.4.umd.min.js" defer></script>
+<script type="module" src="/js/app/main.js"></script>
+</head>
+<body class="app">
+<a class="skip" href="#view">Skip to content</a>
+
+<header class="nav">
+  <div class="ca-bar">
+    <div class="wrap ca-in">
+      <span class="ca-tag">$TETSU <b>CA</b></span>
+      <button class="ca-addr" type="button" data-copy-ca translate="no" aria-label="Copy the $TETSU contract address 0xcomingsoon">0xcomingsoon</button>
+      <button class="ca-btn" type="button" data-copy-ca>Copy</button>
+      <a class="ca-btn ca-buy" href="https://ponsfamily.com/launchpad/0xcomingsoon" rel="noopener" target="_blank">Buy</a>
+    </div>
+  </div>
+  <div class="wrap nav-in">
+    <a class="brand" href="/" aria-label="Tetsu Corp home">
+      <img src="/img/brand/logo-64.png" width="38" height="38" alt="">
+      <span class="brand-txt"><span class="brand-word">TETSU CORP</span><span class="brand-kana">テツ・コーポ</span></span>
+    </a>
+    <span class="ch-chip" aria-hidden="true"><span class="rec"></span>CH 4663</span>
+    <nav class="nav-links" aria-label="App">
+      <a href="#/markets" data-tab-link="markets">Borrow</a>
+      <a href="#/farms" data-tab-link="farms">Farms</a>
+      <a href="#/portfolio" data-tab-link="portfolio">Portfolio</a>
+      <a href="#/liquidate" data-tab-link="liquidate">Rescue</a>
+      <a class="x-link" href="https://x.com/tetsucorp" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg><span class="sr">Tetsu Corp on X</span></a>
+    </nav>
+    <div class="nav-act">
+      <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="Switch between paper and night city">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="wallet-slot" data-wallet><button class="btn coral small" type="button" data-connect><span>Connect</span></button></div>
+    </div>
+  </div>
+</header>
+<div class="banner" data-banner hidden></div>
+
+<main id="view" class="wrap app-main" tabindex="-1">
+  <div class="empty panel boot">Loading the cockpit...</div>
+</main>
+
+<footer class="app-foot">
+  <div class="wrap">
+    <span class="app-foot-b">2026 Tetsu Corp</span>
+    <span class="app-foot-l"><a href="/">Home</a><a href="/contracts.json">Contracts</a><a href="https://x.com/tetsucorp" rel="noopener" target="_blank">X @tetsucorp</a><button class="theme-link" type="button" data-theme-toggle>Paper or night</button></span>
+  </div>
+</footer>
+
+<nav class="tabbar" aria-label="App sections">
+  <a href="#/markets" data-tab-link="markets"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Borrow</span></a>
+  <a href="#/farms" data-tab-link="farms"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M5.5 18.5l2.1-2.1M16.4 7.6l2.1-2.1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Farms</span></a>
+  <a href="#/portfolio" data-tab-link="portfolio"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8.5" r="3.8" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Portfolio</span></a>
+  <a href="#/liquidate" data-tab-link="liquidate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.6-3.4 8.2-8 9-4.6-.8-8-4.4-8-9V6z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M12 8v5M12 16.2v.1" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>Rescue</span></a>
+</nav>
+<div class="toast-host" data-toasts aria-live="polite"></div>
+</body>
+</html>
