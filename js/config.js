@@ -37,7 +37,7 @@ export const BRAND = Object.freeze({
 
 export const USDG = Object.freeze({ address: '0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168', symbol: 'USDG', decimals: 6 });
 // $TETSU, the Tetsu Corp coin on Robinhood Chain, and where to buy it
-export const TOKEN = Object.freeze({ symbol: 'TETSU', address: '0xcomingsoon', buy: 'https://ponsfamily.com/launchpad/0xcomingsoon' });
+export const TOKEN = Object.freeze({ symbol: 'TETSU', address: '0x863072e67e17f0a21add8314750fa13eded7f375', buy: 'https://ponsfamily.com/launchpad/0x863072e67e17f0a21add8314750fa13eded7f375' });
 export const MULTICALL3 = '0xcA11bde05977b3631167028862bE2a173976CA11';
 export const WETH = '0x0Bd7D308f8E1639FAb988df18A8011f41EAcAD73';
 
