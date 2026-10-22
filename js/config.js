@@ -29,8 +29,8 @@ export const BRAND = Object.freeze({
   kanji: '鉄',
   domain: 'tetsucorp.si',
   url: 'https://tetsucorp.si',
-  x: 'https://x.com/tetsucorp',
-  xHandle: 'tetsucorp',
+  x: 'https://x.com/Tetsurobins',
+  xHandle: 'Tetsurobins',
   footer: '2026 Tetsu Corp',
   tagline: 'Stock credit, farmed by agents',
 });
